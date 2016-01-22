@@ -1,0 +1,50 @@
+@color-accent: #00a2ff;
+@color-dark-opaque: darken(#222, 3%);
+@color-dark: fade(@color-dark-opaque, 90%);
+@color-bright: #aaa;
+
+@responsive-width: 768px;
+@desktop-width: 1400px;
+
+
+@import "navbar.less";
+@import "page.less";
+@import "typography.less";
+@import "footer.less";
+@import "feed.less";
+
+::selection {
+	background-color: @color-accent;
+	color: #fff;
+}
+
+body {
+	background-image: url(../images/background.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+.button {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+}
+@media (max-width: @responsive-width) {
+	.button {
+		padding-top: 15px !important;
+		padding-bottom: 15px !important;
+	}
+}
+
+.pull-right {
+	float: right;
+}
+
+@media (min-width: 1200px) {
+	.ui.red.button,
+	.ui.green.button,
+	.ui.white.button {
+		height: 67px;
+		line-height: 2 !important;
+	}
+}

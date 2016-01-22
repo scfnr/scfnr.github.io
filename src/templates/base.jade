@@ -1,0 +1,50 @@
+doctype html
+html
+	head
+		title Students Charity Fight Night
+
+		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+		meta(charset="utf-8")
+
+		link(rel="stylesheet", href="assets/semantic/semantic.min.css")
+		link(rel="stylesheet", href="assets/css/style.min.css")
+		link(rel="shortcut icon", href="assets/images/favicon.ico")
+		link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700", rel="stylesheet", type="text/css")
+
+		script(type="text/javascript", src="https://code.jquery.com/jquery-2.1.4.min.js")
+
+	body
+		block body
+		.footer
+			.ui.stackable.container.grid
+				.row
+					//- scfn links
+					.three.wide.column
+						h3.accent SCFN
+						a(href="#{url.facebook}") auf Facebook
+						br
+						a(href="#{url.youtube}") auf Youtube
+						br
+						a(href="#{url.crowdfunding}") Crowdfunding
+						br
+						br
+						a(href="index.html") Startseite
+						br
+						a(href="faq.html") FAQ
+						br
+						a(href="#{url.register}") Facebook Veranstaltungsseite
+						br
+						a(href="impressum.html") Impressum
+
+					//- partners
+					.thirteen.wide.column
+						h3.accent Partner
+						.partners
+							a(href="http://www.boxfit.de")
+								img(src="assets/images/partners/boxfit.png")
+							a(href="http://www.gongfm.de")
+								img(src="assets/images/partners/gongfm.png")
+							a(href="//www.tvaktuell.com")
+								img(src="assets/images/partners/tva.png")
+							a(href="//www.mylo.club")
+								img(src="assets/images/partners/mylo.png")

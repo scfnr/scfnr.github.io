@@ -1,0 +1,70 @@
+extend ../base
+
+block body
+	.ui.container
+		.ui.relaxed.stackable.grid
+			.stretched.row
+				//- links
+				.twelve.wide.content.column
+					img.logo(src='assets/images/scfn.png')
+
+					.ui.stackable.grid
+						.row
+							.three.wide.column
+								a.ui.red.fluid.inverted.button(href='#{url.youtube}') YouTube
+							.three.wide.column
+								a.ui.green.fluid.inverted.button(href='#{url.crowdfunding}') Crowdfunding
+							.three.wide.column
+								a.ui.blue.fluid.inverted.button(href='#{url.facebook}') Facebook Fanpage
+							.three.wide.column
+								a.ui.fluid.inverted.white.button(href='faq.html') FAQ
+							.four.wide.column
+								a.ui.fluid.teal.inverted.button(href='#{url.register}') Facebook Veranstaltungsseite
+
+				//- feed
+				.four.wide.column
+					.feed
+						span.caption BREAKING NEWS
+
+						.item-wrapper
+							.item-scroller
+								//- feed items
+								each item, i in feed
+									.item 
+										p
+											span.accent= item.author 
+											|  um 
+											b.white= item.time
+
+										p.white= item.message
+
+	//- news script
+	script(type="text/javascript").
+		var timePerPost = 5;
+
+		function repeatScroll() {
+			var items = $(".item-scroller .item").length,
+				scrollDuration = items * timePerPost,
+				scroller = $(".item-scroller"),
+				lastPossibleHeight = scroller.height() - $(".feed").height() + 80;
+
+			if (lastPossibleHeight < 0) {
+				return;
+			}
+
+			scroller.css({
+				"top": "0px",
+				"transition-duration": "0s"
+			});
+
+			setTimeout(function () {
+				scroller.css({
+					"top": -lastPossibleHeight + "px",
+					"transition-duration": scrollDuration + "s"
+				});	
+			}, 200);
+
+			setTimeout(repeatScroll, (scrollDuration + timePerPost) * 1000);
+		}
+
+		setTimeout(repeatScroll, timePerPost * 1000);

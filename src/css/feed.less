@@ -1,0 +1,77 @@
+.feed {
+	position: relative;
+	width: 100%;
+
+	overflow-y: hidden;
+
+	margin-bottom: 8vh;
+	margin-top: 8vh;
+
+	background-color: @color-dark;
+	color: @color-bright;
+
+	border-radius: 5px;
+	border-bottom: 20px solid @color-dark;
+
+	.caption {
+		display: block;
+
+		position: relative;
+
+		padding-top: 25px;
+		padding-bottom: 25px;
+
+		z-index: 9000;
+
+		text-align: center;
+		font-size: 18px;
+		background-color: @color-dark;
+		color: @color-accent;
+	}
+
+	.item-wrapper {
+		position: relative;
+
+		padding: 20px;
+		margin-top: 20px;
+
+		.item-scroller {
+			position: absolute;
+			top: 0px;
+
+			padding-right: 20px;
+
+			transition-property: top;
+			transition-timing-function: linear;
+
+			.item {
+				padding-bottom: 15px;
+				margin-bottom: 15px;
+
+				border-bottom: 1px solid fade(@color-bright, 40%);
+
+				&:last-of-type {
+					border-bottom: none;
+				}
+
+				p {
+					margin: 0px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.feed {
+		height: 100% !important;
+		overflow-y: hidden;
+	}
+}
+
+@media (max-width: @responsive-width) {
+	.feed {
+		height: 400px;
+		overflow-y: hidden;
+	}
+}
