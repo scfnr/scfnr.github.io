@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Students Charity Fight Night</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/semantic/semantic.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  </head>
+  <body>
+    <div class="ui container">
+      <div class="ui relaxed stackable grid">
+        <div class="stretched row">
+          <div class="twelve wide content column"><img src="assets/images/scfn.png" class="logo">
+            <div class="ui stackable grid">
+              <div class="row">
+                <div class="three wide column"><a href="https://www.youtube.com/channel/UC_5TCVIWqnf0l0uEnoTlTjA" class="ui red fluid inverted button">YouTube</a></div>
+                <div class="three wide column"><a href="https://www.indiegogo.com/projects/students-charity-fight-night-regensburg/x/11877805#/" class="ui green fluid inverted button">Crowdfunding</a></div>
+                <div class="three wide column"><a href="https://www.facebook.com/scfnregensburg" class="ui blue fluid inverted button">Facebook Fanpage</a></div>
+                <div class="three wide column"><a href="faq.html" class="ui fluid inverted white button">FAQ</a></div>
+                <div class="four wide column"><a href="https://www.facebook.com/events/1495230480792126/" class="ui fluid teal inverted button">Facebook Veranstaltungsseite</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="four wide column">
+            <div class="feed"><span class="caption">BREAKING NEWS</span>
+              <div class="item-wrapper">
+                <div class="item-scroller">
+                  <div class="item"> 
+                    <p><span class="accent">Stephan</span> um <b class="white">01:13, 15.11.2015</b></p>
+                    <p class="white">Tickets jetzt auch im Café Picasso erhältlich. Tickets zum unschlagbaren VVK-Preis von 10 € PLUS Free-Shot &amp; Gutschein-Special zu jedem Ticket!!!</p>
+                  </div>
+                  <div class="item"> 
+                    <p><span class="accent">Stephan</span> um <b class="white">01:10, 15.11.2015</b></p>
+                    <p class="white">VVK am Montag, 16. November, von 12 bis 14 Uhr an der Uni beim Mensaeingang und Dienstag, 17. November, von 11 bis 14 Uhr am Mensaeingang der OTH!!!</p>
+                  </div>
+                  <div class="item"> 
+                    <p><span class="accent">Stephan</span> um <b class="white">01:09, 15.11.2015</b></p>
+                    <p class="white">Tickets erhältlich in der Innenstadt im &quot;Großen Kasper&quot;, zu finden Hinter der Grieb 5, oder im &quot;kleinen Kasper&quot;, Unter den Schwibbögen 21!!!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var timePerPost = 5;
+      
+      function repeatScroll() {
+      	var items = $(".item-scroller .item").length,
+      		scrollDuration = items * timePerPost,
+      		scroller = $(".item-scroller"),
+      		lastPossibleHeight = scroller.height() - $(".feed").height() + 80;
+      
+      	if (lastPossibleHeight < 0) {
+      		return;
+      	}
+      
+      	scroller.css({
+      		"top": "0px",
+      		"transition-duration": "0s"
+      	});
+      
+      	setTimeout(function () {
+      		scroller.css({
+      			"top": -lastPossibleHeight + "px",
+      			"transition-duration": scrollDuration + "s"
+      		});	
+      	}, 200);
+      
+      	setTimeout(repeatScroll, (scrollDuration + timePerPost) * 1000);
+      }
+      
+      setTimeout(repeatScroll, timePerPost * 1000);
+    </script>
+    <div class="footer">
+      <div class="ui stackable container grid">
+        <div class="row">
+          <div class="three wide column">
+            <h3 class="accent">SCFN</h3><a href="https://www.facebook.com/scfnregensburg">auf Facebook</a><br><a href="https://www.youtube.com/channel/UC_5TCVIWqnf0l0uEnoTlTjA">auf Youtube</a><br><a href="https://www.indiegogo.com/projects/students-charity-fight-night-regensburg/x/11877805#/">Crowdfunding</a><br><br><a href="index.html">Startseite</a><br><a href="faq.html">FAQ</a><br><a href="https://www.facebook.com/events/1495230480792126/">Facebook Veranstaltungsseite</a><br><a href="impressum.html">Impressum</a>
+          </div>
+          <div class="thirteen wide column">
+            <h3 class="accent">Partner</h3>
+            <div class="partners"><a href="http://www.boxfit.de"><img src="assets/images/partners/boxfit.png"></a><a href="http://www.gongfm.de"><img src="assets/images/partners/gongfm.png"></a><a href="//www.tvaktuell.com"><img src="assets/images/partners/tva.png"></a><a href="//www.mylo.club"><img src="assets/images/partners/mylo.png"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
