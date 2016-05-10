@@ -1,0 +1,30 @@
+.button {
+	display: inline-block;
+	padding: 15px;
+
+	text-align: center;
+	text-decoration: none;
+
+	font-size: 34px;
+
+	transition-property: background-color, color;
+	transition-duration: @button-transition-duration;
+
+	&.accent {
+		background-color: @color-accent;
+		color: @color-dark;
+
+		&:hover {
+			background-color: @color-accent-dark;
+		}
+	}
+
+	&.inverted {
+		background-color: @color-dark;
+		color: @color-accent;
+
+		&:hover {
+			background-color: @color-dark-blue;
+		}
+	}
+}

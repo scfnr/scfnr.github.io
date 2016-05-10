@@ -1,0 +1,53 @@
+.container {
+	margin: auto;
+
+	max-width: @container-width;
+}
+
+.row {
+	&:after {
+		content: " ";
+		display: table;
+
+		clear: both;
+		float: none;
+	}
+
+	.column {
+		float: left;
+
+	}
+
+	&.double {
+		.column {
+			width: ~"calc(50% - @{column-margin})";
+			margin: @column-margin / 2;
+
+			&:first-child {
+				margin-left: 0px;
+			}
+		}
+	}
+
+	@media screen and (max-width: @width-mobile) {
+		.column {
+			float: none;
+			display: block;
+		}
+
+		&.double .column {
+			width: 100%;
+
+			& + .column {
+				width: 100%;
+
+				margin-left: 0px;
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.fluid {
+	width: 100%;
+}

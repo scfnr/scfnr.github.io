@@ -1,50 +1,86 @@
-@color-accent: #00a2ff;
-@color-dark-opaque: darken(#222, 3%);
-@color-dark: fade(@color-dark-opaque, 90%);
-@color-bright: #aaa;
+// colors
+@color-accent: #6bfdff;
+@color-dark-blue: #000a22;
+@color-dark: #424242;
 
-@responsive-width: 768px;
-@desktop-width: 1400px;
+@color-accent-light: lighten(@color-accent, 10%);
+@color-accent-dark: darken(@color-accent, 30%);
 
+// repsonsive widths
+@width-mobile: 768px;
+@width-mobile-small: 370px;
+@width-tablet: 1024px;
+@width-desktop: 1400px;
 
-@import "navbar.less";
-@import "page.less";
+// general
+@body-margin-size: 40px;
+@transition-duration: 0.2s;
+
+// buttons
+@button-transition-duration: @transition-duration;
+
+// navbar
+@navbar-logo-width: 304px;
+@navbar-open-duration: @transition-duration;
+@navbar-background-animation-duration: @transition-duration;
+
+// jumbotron
+@jumbotron-transition-duration: @transition-duration;
+@jumbotron-content-width: 800px;
+@jumbotron-content-width-responsive: 80%;
+@jumbotron-border-distance: 40px;
+@jumbotron-border-width: 3px;
+@jumbotron-border-height: 145px;
+@jumbotron-border-transition-duration: 1s;
+
+// container
+@container-width: 900px;
+@container-grey-background: #ebebeb;
+
+// grid
+@column-margin: 10px;
+
+// footer
+@footer-links-size: 100px;
+
 @import "typography.less";
-@import "footer.less";
-@import "feed.less";
+@import "components/navbar.less";
+@import "components/jumbotron.less";
+@import "components/progressbar.less";
+@import "components/grid.less";
+@import "components/button.less";
+@import "components/colored-background.less";
+@import "components/landing-container.less";
+@import "components/partner-container.less";
+@import "components/footer.less";
+@import "components/site-container.less";
+
+* {
+	box-sizing: border-box;
+}
 
 ::selection {
 	background-color: @color-accent;
-	color: #fff;
+	color: #333;
 }
 
 body {
-	background-image: url(../images/background.jpg);
-	background-size: cover;
-	background-position: center center;
-	background-attachment: fixed;
+	margin: 0px;
+	padding: @body-margin-size;
+	padding-bottom: 0px;
+
+	overflow-x: hidden;
+
+	font-size: 14px;
 }
 
-.button {
-	padding-top: 20px !important;
-	padding-bottom: 20px !important;
-}
-@media (max-width: @responsive-width) {
-	.button {
-		padding-top: 15px !important;
-		padding-bottom: 15px !important;
+@media screen and (max-width: @width-mobile) {
+	body {
+		padding: 30px;
+		padding-bottom: 0px;
 	}
 }
 
-.pull-right {
-	float: right;
-}
-
-@media (min-width: 1200px) {
-	.ui.red.button,
-	.ui.green.button,
-	.ui.white.button {
-		height: 67px;
-		line-height: 2 !important;
-	}
+.hidden {
+	display: none;
 }

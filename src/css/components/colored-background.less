@@ -1,0 +1,26 @@
+.background {
+	position: relative;
+	display: block;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	z-index: 200;
+
+	&.grey {
+		background-color: #ebebeb;
+
+		&.dark {
+			background-color: #d5d5d5;
+		}
+	}
+
+	&.dark.blue {
+		background-color: fade(@color-dark-blue, 97%);
+		color: white;
+	}
+
+	&.white {
+		background-color: white;
+	}
+}

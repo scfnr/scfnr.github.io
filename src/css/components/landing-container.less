@@ -1,0 +1,115 @@
+.landing.container {
+	margin-top: -100px;
+
+	&:after {
+		display: table;
+		content: " ";
+
+		clear: both;
+	}
+
+	.dark.blue.background {
+		padding: 60px 90px;
+
+		h2 {
+			margin-top: 0px;
+
+			font-size: 40px;
+		}
+	}
+
+	.dark.grey.background {
+		display: inline-block;
+		width: 60%;
+
+		float: left;
+
+		padding: 40px;
+		margin-left: -10%;
+
+		h1 {
+			padding-top: 0px;
+			margin-bottom: 30px;
+		}
+	}
+
+	.white.background.video {
+		position: relative;
+
+		display: inline-block;
+		width: 60%;
+		height: 300px;
+
+		float: left;
+
+		margin-right: -10%;
+		margin-top: -30px;
+
+		iframe {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+
+			width: 100%;
+			height: 100%;
+
+			border: 10px solid #fff;
+		}
+	}
+
+	& + .container {
+		margin-top: 30px;
+	}
+
+	@media screen and (max-width: @width-desktop) {
+		.dark.grey.background,
+		.white.background.video {
+			width: 55%;
+		}
+
+		.dark.grey.background {
+			margin-left: -5%;
+		}
+
+		.white.background.video {
+			height: 275px;
+		}
+	}
+
+	@media screen and (max-width: @width-mobile) {
+		margin-top: 0px;
+		
+		.dark.blue.background {
+			display: block;
+			padding: 30px;
+
+			h2 {
+				font-size: 26px;
+			}
+		}
+
+		.dark.grey.background {
+			display: block;
+
+			width: 100%;
+			padding: 20px 30px;
+
+			margin-left: 0px;
+		}
+
+		.white.background.video {
+			display: block;
+
+			margin-top: 0px;
+			margin-right: 0px;
+
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: @width-mobile-small) {
+		.white.background.video {
+			height: 150px;
+		}
+	}
+}

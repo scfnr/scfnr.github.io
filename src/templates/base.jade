@@ -1,50 +1,51 @@
 doctype html
-html
+html(lang="de")
 	head
 		title Students Charity Fight Night
 
 		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
 		meta(charset="utf-8")
+		meta(name="theme-color", content="#222222")
 
-		link(rel="stylesheet", href="assets/semantic/semantic.min.css")
 		link(rel="stylesheet", href="assets/css/style.min.css")
 		link(rel="shortcut icon", href="assets/images/favicon.ico")
-		link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700", rel="stylesheet", type="text/css")
-
-		script(type="text/javascript", src="https://code.jquery.com/jquery-2.1.4.min.js")
+		link(href="https://fonts.googleapis.com/css?family=Montserrat", rel="stylesheet", type="text/css")
 
 	body
-		block body
-		.footer
-			.ui.stackable.container.grid
-				.row
-					//- scfn links
-					.three.wide.column
-						h3.accent SCFN
-						a(href="#{url.facebook}") auf Facebook
-						br
-						a(href="#{url.youtube}") auf Youtube
-						br
-						a(href="#{url.crowdfunding}") Crowdfunding
-						br
-						br
-						a(href="index.html") Startseite
-						br
-						a(href="faq.html") FAQ
-						br
-						a(href="#{url.register}") Facebook Veranstaltungsseite
-						br
-						a(href="impressum.html") Impressum
+		.navbar
+			input(type="checkbox", id="navbar-checkbox")
 
-					//- partners
-					.thirteen.wide.column
-						h3.accent Partner
-						.partners
-							a(href="http://www.boxfit.de")
-								img(src="assets/images/partners/boxfit.png")
-							a(href="http://www.gongfm.de")
-								img(src="assets/images/partners/gongfm.png")
-							a(href="//www.tvaktuell.com")
-								img(src="assets/images/partners/tva.png")
-							a(href="//www.mylo.club")
-								img(src="assets/images/partners/mylo.png")
+			nav.uppercase.menu
+				label.spaced(for="navbar-checkbox") &times; Menü schliessen
+
+				ul
+					each item, i in config.navbar
+						li(class=item.template === file ? "active" : "")
+							a(href="#{item.url}")= item.name
+
+			label.spaced.uppercase.navbar-toggle(for="navbar-checkbox", class=file === "index.jade" ? "white" : "") Menü
+			img(src="assets/images/scfn.png")
+
+		block body
+
+		.grey.background.footer
+		.dark.blue.background.container
+			.images
+				a(target="_blank", href="#{config.url.facebook}")
+					img(src="assets/images/icons/facebook.png")
+				a(target="_blank", href="#{config.url.youtube}")
+					img(src="assets/images/icons/youtube.png")
+				a(target="_blank", href="#{config.url.crowdfunding}")
+					img(src="assets/images/icons/crowdfunding.png")
+				a(href="faq.html")
+					img(src="assets/images/icons/faqs.png")
+
+			.uppercase
+				span SCFN - Student Charity Fight Night || 
+				
+				each item, i in config.navbar
+					if i > 1
+						a(href="#{item.url}") #{item.name}
+
+						if i < 4
+							span  | 

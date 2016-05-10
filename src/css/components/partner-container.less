@@ -1,0 +1,145 @@
+.partner.container {
+	position: relative;
+	padding-bottom: 75px;
+
+	.slideshow {
+		white-space: nowrap;
+
+		overflow-x: hidden;
+
+		.image {
+			display: inline-table;
+			width: 100%;
+
+			transition-property: margin-left;
+			transition-duration: 0.2s;
+
+			a {
+				display: table-cell;
+				text-align: center;
+
+				&.align-left {
+					text-align: left;
+				}
+
+				&.align-right {
+					text-align: right;
+				}
+
+				img {
+					max-height: 75px;
+				}
+			}
+		}
+
+		.of-size(@n) {
+			.image.of-size-@{n} a {
+				width: percentage(1/@n);
+			}
+
+			@media screen and (max-width: @width-mobile) {
+				.image.of-size-@{n} a {
+					width: 100%;
+				}
+			}
+		}
+
+		.of-size(1);
+		.of-size(2);
+		.of-size(3);
+		.of-size(4);
+		.of-size(5);
+
+		.left,
+		.right {
+			position: absolute;
+			top: -5px;
+
+			cursor: pointer;
+		}
+
+		.partner-arrows-outside-bounds(@distance) {
+			.left {
+				left: @distance;
+			}
+
+			.right {
+				right: @distance;
+			}
+		}
+
+		.partner-arrows-outside-bounds(-125px);
+
+		@media screen and (max-width: @width-desktop) {
+			.partner-arrows-outside-bounds(-100px);
+		}
+
+		@media screen and (max-width: @width-tablet) {
+			.left,
+			.right {
+				top: -125px;
+			}
+
+			.left {
+				left: auto;
+				right: 100px;
+			}
+
+			.right {
+				right: -15px;
+			}
+		}
+
+		@media screen and (max-width: @width-mobile) {
+			.image a {
+				display: block;
+				margin-bottom: 20px;
+
+				&.align-left,
+				&.align-right {
+					text-align: center;
+				}
+
+				img {
+					max-height: 60px;
+				}
+			}
+
+			.left,
+			.right {
+				img {
+					max-height: 75px;
+				}
+			}
+
+			.left {
+				right: 75px;
+			}
+		}
+
+		@media screen and (max-width: @width-mobile-small) {
+			.image a img {
+				max-height: 50px;
+			}
+
+			.left,
+			.right {
+				top: -115px;
+
+				img {
+					max-height: 50px;
+				}
+			}
+
+			.left {
+				right: 35px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: @width-mobile) {
+	.partner.container {
+		padding-bottom: 0px;
+	}
+}

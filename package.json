@@ -1,11 +1,11 @@
 {
-	"dependencies": {
-		"semantic-ui": "*"
-	},
 	"devDependencies": {
 		"gulp": "*",
 		"gulp-rename": "*",
+		"gulp-concat": "*",
 		"gulp-less": "*",
+		"gulp-uglify": "*",
+		"gulp-data": "*",
 		"gulp-jade": "*"
 	}
 }

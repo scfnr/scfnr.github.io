@@ -1,13 +1,10 @@
-var URL = {
-	FACEBOOK: "https://www.facebook.com/scfnregensburg",
-	YOUTUBE: "https://www.youtube.com/channel/UC_5TCVIWqnf0l0uEnoTlTjA",
-	CROWDFUNDING: "https://www.indiegogo.com/projects/students-charity-fight-night-regensburg/x/11877805#/",
-	REGISTER: "https://www.facebook.com/events/1495230480792126/"
-};
-
 var gulp   = require("gulp"),
 	rename = require("gulp-rename"),
+	concat = require("gulp-concat"),
 	less   = require("gulp-less"),
+	uglify = require("gulp-uglify"),
+	data   = require("gulp-data"),
+	path   = require("path"),
 	jade   = require("gulp-jade");
 
 var SRC = {
@@ -15,12 +12,14 @@ var SRC = {
 		MAIN: "src/css/style.less",
 		WATCH: "src/css/**/*.less"
 	},
+	JS: "src/js/**/*.js",
 	IMAGES: "src/images/**/*",
 	TEMPLATES: "src/templates/pages/*.jade"
 };
 
 var DEST = {
 	CSS: "dist/assets/css/",
+	JS: "dist/assets/js/",
 	IMAGES: "dist/assets/images/",
 	TEMPLATES: "dist/"
 };
@@ -34,6 +33,15 @@ gulp.task("css", function () {
 		.pipe(gulp.dest(DEST.CSS));
 });
 
+gulp.task("js", function () {
+	gulp.src(SRC.JS)
+		.pipe(concat("scfn.js"))
+		// .pipe(gulp.dest(DEST.JS))
+		.pipe(uglify())
+		.pipe(rename("scfn.min.js"))
+		.pipe(gulp.dest(DEST.JS));
+});
+
 gulp.task("images", function () {
 	gulp.src(SRC.IMAGES)
 		.pipe(gulp.dest(DEST.IMAGES));
@@ -41,24 +49,24 @@ gulp.task("images", function () {
 
 gulp.task("templates", function () {
 	gulp.src(SRC.TEMPLATES)
+		.pipe(data(function (file) {
+			var config = require("./config.json");
+
+			return {
+				config: config,
+				file: path.basename(file.path)
+			};
+		}))
 		.pipe(jade({
-			pretty: true,
-			data: {
-				url: {
-					facebook: URL.FACEBOOK,
-					youtube: URL.YOUTUBE,
-					crowdfunding: URL.CROWDFUNDING,
-					register: URL.REGISTER
-				},
-				feed: require("./feed.json")
-			}
+			pretty: true
 		}))
 		.pipe(gulp.dest(DEST.TEMPLATES));
 });
 
-gulp.task("default", ["css", "images", "templates"]);
+gulp.task("default", ["css", "js", "images", "templates"]);
 
 gulp.task("watch", ["default"], function () {
 	gulp.watch(SRC.CSS.WATCH, ["css"]);
+	gulp.watch(SRC.JS, ["js"]);
 	gulp.watch(SRC.TEMPLATES, ["templates"]);
 });

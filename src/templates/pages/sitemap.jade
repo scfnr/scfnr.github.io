@@ -1,0 +1,9 @@
+extend ../site
+
+block content
+	h1.uppercase Sitemap
+
+	ul
+		each item in config.navbar
+			li
+				a(href="#{item.url}") #{item.name}

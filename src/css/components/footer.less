@@ -1,0 +1,56 @@
+.footer {
+	padding: 0px;
+	padding-bottom: 45px;
+
+	.upper.button {
+		position: relative;
+		top: -35px;
+	}
+
+	@media screen and (max-width: @width-tablet) {
+		padding-bottom: 60px;
+		
+		.upper.button {
+			top: 0px;
+		}
+	}
+}
+
+.footer + .dark.blue.background.container {
+	margin-top: -40px;
+
+	font-size: 9px;
+	color: @color-accent;
+	text-align: center;
+
+	.images {
+		margin-top: -60px;
+		margin-bottom: 10px;
+
+		a {
+			display: inline-block;
+
+			& + a {
+				margin-left: 15px;
+			}
+		}
+	}
+
+	a {
+		color: @color-accent;
+	}
+
+	@media screen and (max-width: @width-mobile) {
+		font-size: 8px;
+
+		.images a img {
+			max-width: 65px;
+		}
+	}
+
+	@media screen and (max-width: @width-mobile-small) {
+		.images a img {
+			max-width: 50px;
+		}
+	}
+}

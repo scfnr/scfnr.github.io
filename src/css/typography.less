@@ -1,23 +1,88 @@
-a,
 body {
-	font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !important;
-	font-weight: normal !important;
+	font-family: "Montserrat", Arial, sans-serif !important;
+
+	color: @color-dark;
 }
 
 .accent {
 	color: @color-accent;
 }
 
-.white {
-	color: #ddd;
-}
-
 .center.aligned {
 	text-align: center;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.spaced {
+	letter-spacing: 2px;
 }
 
 h1,
 h2,
 h3 {
 	font-weight: normal;
+
+	&.accent {
+		color: @color-accent-dark;
+	}
+}
+
+h1 {
+	position: relative;
+	
+	margin-top: 0px;
+	margin-bottom: 50px;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	font-size: 40px;
+
+	&:before {
+		display: block;
+		content: " ";
+
+		position: absolute;
+		top: 100%;
+		left: 0px;
+
+		width: 95px;
+		height: 7px;
+
+		background-color: @color-accent;
+	}
+}
+
+a {
+	text-decoration: none;
+
+	transition-property: color;
+	transition-duration: @transition-duration;
+
+	color: @color-accent-dark;
+
+	&:visited {
+		color: @color-accent-dark;
+	}
+}
+
+.hyphenate {
+	hyhpens: auto;
+}
+
+@media screen and (max-width: @width-mobile) {
+	h1 {
+		font-size: 34px;
+	}
+
+	h2 {
+		font-size: 26px;
+	}
+
+	h3 {
+		font-size: 18px;
+	}
 }

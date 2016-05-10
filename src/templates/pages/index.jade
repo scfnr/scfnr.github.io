@@ -1,70 +1,83 @@
 extend ../base
 
 block body
-	.ui.container
-		.ui.relaxed.stackable.grid
-			.stretched.row
-				//- links
-				.twelve.wide.content.column
-					img.logo(src='assets/images/scfn.png')
+	//- index slideshow
+	.jumbotron 
+		each item in config.index.jumbotron
+			.image(style="background-image: url(#{item.image});")
+				.content
+					h1 !{item.heading}
 
-					.ui.stackable.grid
-						.row
-							.three.wide.column
-								a.ui.red.fluid.inverted.button(href='#{url.youtube}') YouTube
-							.three.wide.column
-								a.ui.green.fluid.inverted.button(href='#{url.crowdfunding}') Crowdfunding
-							.three.wide.column
-								a.ui.blue.fluid.inverted.button(href='#{url.facebook}') Facebook Fanpage
-							.three.wide.column
-								a.ui.fluid.inverted.white.button(href='faq.html') FAQ
-							.four.wide.column
-								a.ui.fluid.teal.inverted.button(href='#{url.register}') Facebook Veranstaltungsseite
+					.description 
+						span !{item.content}
+						if item.more
+							a.more(href="#{item.more}") || 
+								span.spaced Mehr erfahren
 
-				//- feed
-				.four.wide.column
-					.feed
-						span.caption BREAKING NEWS
+		a.hidden.left
+			img(src="assets/images/icons/jumbotron-left.png")
+		a.hidden.right
+			img(src="assets/images/icons/jumbotron-right.png")
 
-						.item-wrapper
-							.item-scroller
-								//- feed items
-								each item, i in feed
-									.item 
-										p
-											span.accent= item.author 
-											|  um 
-											b.white= item.time
+		.hidden.progress
+			.bar
 
-										p.white= item.message
+	.grey.background
+		.landing.container
+			.dark.blue.background
+				h2.accent !{config.index.dark.heading}
 
-	//- news script
+				.double.row
+					.column !{config.index.dark.left}
+					.column !{config.index.dark.right}
+
+			.dark.grey.background
+				h1 !{config.index.grey.heading}
+
+				span !{config.index.grey.content}
+
+			.white.background.video
+				iframe(src=config.index.video frameborder="0", allowfullscreen)
+
+		.container
+			a.uppercase.fluid.accent.button(href="#{config.url.register}") Jetzt anmelden!
+
+	.white.background
+		.container
+			h1.uppercase Partner
+		
+		//- partner slideshow
+		.partner.container
+			.slideshow
+				each page in config.partners
+					.image(class="of-size-#{page.length}")
+						each partner, i in page
+							if i == 0 || partner.align == "left"
+								a.align-left(target="_blank", href="#{partner.url}")
+									img(src="#{partner.image}")
+							else if i == page.length - 1 || partner.align == "right"
+								a.align-right(target="_blank", href="#{partner.url}")
+									img(src="#{partner.image}")
+							else
+								a(target="_blank", href="#{partner.url}")
+									img(src="#{partner.image}")
+
+				a.hidden.left
+					img(src="assets/images/icons/partners-left.png")
+				a.hidden.right
+					img(src="assets/images/icons/partners-right.png")
+
+	.grey.background.footer
+		.container
+			a.fluid.inverted.uppercase.upper.button(href="#") Mehr erfahren &amp; Partner werden!
+
+	script(type="text/javascript", src="https://code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
+	script(type="text/javascript", src="assets/js/scfn.min.js")
 	script(type="text/javascript").
-		var timePerPost = 5;
+		$(function () {
+			//- $(".jumbotron").slideshow({
+			//- 	duration: 15
+			//- });
 
-		function repeatScroll() {
-			var items = $(".item-scroller .item").length,
-				scrollDuration = items * timePerPost,
-				scroller = $(".item-scroller"),
-				lastPossibleHeight = scroller.height() - $(".feed").height() + 80;
-
-			if (lastPossibleHeight < 0) {
-				return;
-			}
-
-			scroller.css({
-				"top": "0px",
-				"transition-duration": "0s"
-			});
-
-			setTimeout(function () {
-				scroller.css({
-					"top": -lastPossibleHeight + "px",
-					"transition-duration": scrollDuration + "s"
-				});	
-			}, 200);
-
-			setTimeout(repeatScroll, (scrollDuration + timePerPost) * 1000);
-		}
-
-		setTimeout(repeatScroll, timePerPost * 1000);
+			//- $(".partner.container .slideshow").slideshow();
+		});

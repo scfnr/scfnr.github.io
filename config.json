@@ -1,0 +1,72 @@
+{
+	"navbar": [
+		{
+			"name": "Home",
+			"url": "index.html",
+			"template": "index.jade"
+		},
+		{
+			"name": "FAQ",
+			"url": "faq.html",
+			"template": "faq.jade"
+		},
+		{
+			"name": "Impressum",
+			"url": "impressum.html",
+			"template": "impressum.jade"
+		},
+		{
+			"name": "Datenschutz",
+			"url": "datenschutz.html",
+			"template": "datenschutz.jade"
+		},
+		{
+			"name": "Sitemap",
+			"url": "sitemap.html",
+			"template": "sitemap.jade"
+		}
+	],
+	"index": {
+		"jumbotron": [
+			{
+				"heading": "NICHT MEHR LANGE...",
+				"content": "... kaum ist das neue Semester angebrochen, könnt ihr euch schon auf das nächste freuen: die Students Charity Fight Night kommt wieder! Neue Boxer, neue Projekte, spannende Kämpfe und eine riesen Afterparty &mdash; und das alles in einer atemberaubenden Location. Mehr Infos bekommt ihr bald! ",
+				"image": "assets/images/jumbotron/fighters.jpg",
+				"more": false
+			}
+		],
+		"dark": {
+			"heading": "KURZ UND KNAPP <br> Was ist SCFN?",
+			"left": "Die Students Charity Fight Night ist ein soziales Event, bei dem 12 Studenten in 6 Boxkämpfen gegeneinander antreten, um für ihre",
+			"right": "ausgewählten sozialen Projekte Spendengelder zu erkämpfen. Hast du Lust, als Teilnehmer dabei zu sein? Dann nichts wie los zur Anmeldung!"
+		},
+		"grey": {
+			"heading": "WAS WAR HIER <br> DENN LOS?",
+			"content": "KRASSE TEILNEHMER. KRASSE STIMMUNG. COOLE PROJEKTE. HAMMER PUBLIKUM. MEGA PARTY. <br> <br> Die erste Students Charity Fight Night in Regensburg war ein riesen Erfolg. Überzeug dich selbst. "
+		},
+		"video": "https://www.youtube.com/embed/ltY7Igjm7s8?modestbranding=1&rel=0&showinfo=0&color=white&theme=light"
+	},
+	"partners": [
+		[
+			{
+				"url": "http://boxfit.de",
+				"image": "assets/images/partners/boxfit.png"
+			},
+			{
+				"url": "http://gongfm.de",
+				"image": "assets/images/partners/gongfm.png",
+				"align": "right"
+			},
+			{
+				"url": "http://tvaktuell.com",
+				"image": "assets/images/partners/tva.png"
+			}
+		]
+	],
+	"url": {
+		"facebook": "https://www.facebook.com/scfnregensburg",
+		"youtube": "https://www.youtube.com/channel/UC_5TCVIWqnf0l0uEnoTlTjA",
+		"crowdfunding": "https://www.indiegogo.com/projects/students-charity-fight-night-regensburg/x/11877805#/",
+		"register": "https://www.facebook.com/events/1495230480792126/"
+	}
+}
