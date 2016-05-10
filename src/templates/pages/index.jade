@@ -69,7 +69,7 @@ block body
 
 	.grey.background.footer
 		.container
-			a.fluid.inverted.uppercase.upper.button(href="#") Mehr erfahren &amp; Partner werden!
+			a.fluid.inverted.uppercase.upper.button(target="_blank", href="#{config.url.facebook}") Mehr erfahren &amp; Partner werden!
 
 	script(type="text/javascript", src="https://code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
 	script(type="text/javascript", src="assets/js/scfn.min.js")
@@ -80,4 +80,6 @@ block body
 			//- });
 
 			//- $(".partner.container .slideshow").slideshow();
+			
+			$(".image .content").addClass("active");
 		});
