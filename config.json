@@ -11,6 +11,11 @@
 			"template": "faq.jade"
 		},
 		{
+			"name": "Kontakt",
+			"url": "kontakt.html",
+			"template": "kontakt.jade"
+		},
+		{
 			"name": "Impressum",
 			"url": "impressum.html",
 			"template": "impressum.jade"
@@ -67,6 +72,6 @@
 		"facebook": "https://www.facebook.com/scfnregensburg",
 		"youtube": "https://www.youtube.com/channel/UC_5TCVIWqnf0l0uEnoTlTjA",
 		"crowdfunding": "https://www.indiegogo.com/projects/students-charity-fight-night-regensburg/x/11877805#/",
-		"register": "https://www.facebook.com/events/1495230480792126/"
+		"register": "https://docs.google.com/forms/d/1qd6YdD-dYYpCsFXejf6n-eIz-cVqb6j2XGP66f2n6m4/viewform"
 	}
 }
