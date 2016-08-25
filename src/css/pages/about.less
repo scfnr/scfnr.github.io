@@ -1,0 +1,24 @@
+.about {
+	h1 {
+		display: inline-block;
+
+		position: relative;
+		top: 100px;
+	}
+
+	img {
+		float: right;
+
+		width: 650px;
+	}
+
+	@media screen and (max-width: @width-mobile) {
+		h1 {
+			display: block;
+			top: 0px;
+		}
+		img {
+			display: none;
+		}
+	}
+}

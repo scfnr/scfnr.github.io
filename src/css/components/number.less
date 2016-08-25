@@ -1,0 +1,25 @@
+.number {
+	display: inline-block;
+
+	.value {
+		display: inline-block;
+		font-size: @number-value-size;
+	}
+
+	.description {
+		display: inline-block;
+
+		padding-top: 30px;
+		padding-bottom: 4px;
+
+		font-size: @number-description-size;
+
+		vertical-align: top;
+		border-bottom: 12px solid @color-accent;
+
+		.details {
+			display: inline-block;
+			font-size: @number-details-size;
+		}
+	}
+}

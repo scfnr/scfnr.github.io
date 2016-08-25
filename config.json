@@ -6,6 +6,31 @@
 			"template": "index.jade"
 		},
 		{
+			"name": "Großes Leisten",
+			"url": "grosses-leisten.html",
+			"template": "grosses-leisten.jade"
+		},
+		{
+			"name": "Was ist die SCFN",
+			"url": "was-ist-die-scfn.html",
+			"template": "was-ist-die-scfn.jade"
+		},
+		{
+			"name": "In der Presse",
+			"url": "presse.html",
+			"template": "presse.jade"
+		},
+		{
+			"name": "Unterstützte Projekte",
+			"url": "projekte.html",
+			"template": "projekte.jade"
+		},
+		{
+			"name": "Die SCFN 2015",
+			"url": "scfn-2015.html",
+			"template": "scfn-2015.jade"
+		},
+		{
 			"name": "FAQ",
 			"url": "faq.html",
 			"template": "faq.jade"
@@ -31,11 +56,229 @@
 			"template": "sitemap.jade"
 		}
 	],
+	"team": [
+		{
+			"name": "Alex Hofmann",
+			"image": "assets/images/team/alex-hofmann.jpg",
+			"position": "1. Vorstand"
+		},
+		{
+			"name": "Andreas Stegerer",
+			"image": "assets/images/team/andreas-stegerer.jpg",
+			"position": "2. Vorstand"
+		},
+		{
+			"name": "Florian Kelm",
+			"image": "assets/images/team/florian-kelm.jpg",
+			"position": "Kassier"
+		},
+		{
+			"name": "Lisa Schultes",
+			"image": "assets/images/team/lisa-schultes.jpg",
+			"position": "Schriftführerin"
+		},
+		{
+			"name": "Lena Hackenspiel",
+			"image": "assets/images/team/lena-hackenspiel.jpg",
+			"position": "Marketing"
+		}
+	],
+	"statements": [
+		{
+			"text": "Ich traute meinen Augen und Ohren kaum! Es war für mich nicht vorstellbar, das Mylo mit einer Box-Night in einen derartigen Hexen&shy;kessel zu verwandeln. Mit den besten Erinnerungen denke ich an das Event zurück und wünsche mir für dieses Jahr die gleiche Begeis&shy;terung. Gerne stehe ich wieder als Moderator für diese einmalige und tolle Idee zur Verfügung!",
+			"person": "Christian Sauerer",
+			"company": "TVA"
+		},
+		{
+			"text": "Die SCFN 2015 war mein erstes Boxevent und eine einmalige Atmosphäre, welche Sport, Charity und Studenten für einen guten Zweck zusammen gebracht hat.",
+			"person": "Philipp Maier & Philipp Hockenberger",
+			"company": "MINUSP&phi;L"
+		},
+		{
+			"text": "Die SCFN 2015 war für mich ein besonderes Erlebnis, da ich mich für einen vollkommen neuen Sport - das Boxen - begeistern konnte. So sehr, dass ich ihn seitdem hobbymäßig weiterverfolge. Viele neue Erfahrungen und Bekannt&shy;schaften machten den Event zu einem unvergesslichen Erlebnis an dem ich jederzeit gern wieder teilnehmen würde. Das wichtigste jedoch war für mich, dass ich mein soziales Projekt - die Kochgruppe für Flüchtlinge des Campus Asyl e.V. - unterstützen konnte und somit sehr viel für einen guten Zweck getan werden konnte. Vielen Dank dafür an die Organisa&shy;toren und alle Unterstützer!",
+			"person": "Filip Strotmann",
+			"company": "KASP5R"
+		},
+		{
+			"text": "Die SCFN 2015 war kurz gesagt eine traumhafte Veranstaltung; mein Highlight war die atembe&shy;raubende Stimmung in Verbindung mit den Anfeuerungen für die Boxer und der After-Show-Party - und das alles für einen guten Zweck!!! Weiter so!!",
+			"person": "Alex Hofmann",
+			"company": "Picasso Regensburg"
+		}
+	],
+	"projects": [
+		{
+			"name": "Taha School Project e.V.",
+			"image": "assets/images/projects/taha-school-projekt.png"
+		},
+		{
+			"name": "Herzenswünsche für Kinder e.V.",
+			"image": "assets/images/projects/herzenswuensche.png"
+		},
+		{
+			"name": "Unikindergarten",
+			"image": "assets/images/projects/unikindergarten.gif"
+		},
+		{
+			"name": "Pater-Rupert-Mayer-Zentrum",
+			"image": "assets/images/projects/pater-rupert-mayer-zentrum.png"
+		},
+		{
+			"name": "Go.For It",
+			"image": "assets/images/projects/go-for-it.png"
+		},
+		{
+			"name": "Verein zur Förderung krebskranker <br> und körperbehinderter Kinder",
+			"image": "assets/images/projects/verein-foerderung-krebskranker-koerperbehinderter-kinder.png"
+		},
+		{
+			"name": "Kiron University",
+			"image": "assets/images/projects/kiron-university.png"
+		},
+		{
+			"name": "Ingenieure ohne Grenzen",
+			"image": "assets/images/projects/ingenieure-ohne-grenzen.png"
+		},
+		{
+			"name": "Movember e.V.",
+			"image": "assets/images/projects/movember.png"
+		},
+		{
+			"name": "Campus Asyl (Kochgruppe)",
+			"image": "assets/images/projects/campusasyl.png"
+		},
+		{
+			"name": "\"Brücken für Regensburg\" Jahn Regensburg",
+			"image": "assets/images/projects/bruecken-bauen.jpeg"
+		}
+	],
+	"events": {
+		"scfn2015": [
+			{
+				"type": "half",
+				"elements": [
+					{
+						"text": "Die erste Students Charity Fight Night im Winter 2015 war ein voller Erfolg. 12 Studenten unterschiedlicher Fakultäten traten gegeneinander an, um für ihre sozialen Projekte Spenden zu erkämpfen.",
+						"image": "assets/images/events/scfn-2015/000.jpg"
+					},
+					{
+						"text": "In nur wenigen Wochen haben die Teilnehmer im Boxstudio BOXFIT unter professioneller Anleitung die wichtigsten Grundtechniken für diesen Kampfsport erlernt und hart für den großen Tag trainiert.",
+						"image": "assets/images/events/scfn-2015/001.jpg"
+					},
+					"break",
+					{
+						"text": "Der Mylo Grand Club in Regensburg war an diesem Abend DER Treffpunkt für Studenten, die ihre Kommilitonen bei ihrem Vorhaben unterstützen und anfeuern wollten. Ihnen wurde nicht zu viel versprochen...",
+						"image": "assets/images/events/scfn-2015/003.jpg"
+					},
+					{
+						"text": "...im Ring ging es hart zur Sache. Die Stimmung war berauschend, denn dem Publikum wurden vom Anfang bis zum Schluss spannende Duelle geboten.",
+						"image": "assets/images/events/scfn-2015/004.jpg"
+					}
+				]
+			},
+			{
+				"type": "single",
+				"elements": [
+					{
+						"text": "Die Aufregung war groß – aber nicht umsonst: Knapp 700 Zuschauer sind zum Anfeuern gekommen.",
+						"image": "assets/images/events/scfn-2015/002.jpg"
+					}
+				]
+			},
+			{
+				"elements": [
+					{
+						"text": "Es konnten viele Erfolge gefeiert werden. Nicht nur für die einzelnen Kämpfer, sondern auch im sozialen Bereich.",
+						"image": "assets/images/events/scfn-2015/005.jpg"
+					},
+					{
+						"text": "Das Ziel war schließlich bei allen dasselbe: Für die Spenden der Zuschauer eine MEGASHOW zu bieten. Und das ist den 12 Kämpfern allemal gelungen. Durch die große Begeisterung bei den Zuschauern kann man sich schon auf die neue Students Charity Fight Night 2016 freuen, welche noch größer zu sein verspricht.",
+						"image": "assets/images/events/scfn-2015/006.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/007.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/008.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/009.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/010.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/011.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/012.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/013.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/016.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/017.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/018.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/014.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/015.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/019.jpg"
+					}
+				]
+			},
+			{
+				"type": "half",
+				"elements": [
+					{
+						"image": "assets/images/events/scfn-2015/021.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/022.jpg"
+					},
+					"break",
+					{
+						"image": "assets/images/events/scfn-2015/023.jpg"
+					},
+					{
+						"image": "assets/images/events/scfn-2015/024.jpg"
+					}
+				]
+			},
+			{
+				"type": "single",
+				"elements": [
+					{
+						"image": "assets/images/events/scfn-2015/020.jpg"
+					}
+				]
+			},
+			{
+				"elements": [
+					{
+						"image": "assets/images/events/scfn-2015/025.jpg"
+					},
+					{
+						"text": "Moderation durch TVA",
+						"image": "assets/images/events/scfn-2015/026.jpg"
+					}
+				]
+			}
+		]
+	},
 	"index": {
 		"jumbotron": [
 			{
 				"heading": "NICHT MEHR LANGE...",
-				"content": "... kaum ist das neue Semester angebrochen, könnt ihr euch schon auf das nächste freuen: die Students Charity Fight Night kommt wieder! Neue Boxer, neue Projekte, spannende Kämpfe und eine riesen Afterparty &mdash; und das alles in einer atemberaubenden Location. Mehr Infos bekommt ihr bald! ",
+				"content": "... kaum ist das neue Semester angebrochen, könnt ihr euch schon auf das nächste freuen: die Students Charity Fight Night kommt am 29.12 wieder nach Regensburg! Neue Boxer, tolle Projekte, spannende Kämpfe und eine riesen Afterparty &mdash; und das alles in einer atemberaubenden Location: dem Kolpinghaus in Regensburg ",
 				"image": "assets/images/jumbotron/fighters.jpg",
 				"more": false
 			}

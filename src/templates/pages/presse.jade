@@ -1,0 +1,45 @@
+extend ../site
+include ../mixins/quote
+include ../mixins/number
+
+block content
+	.press
+		h1.uppercase
+			| In der
+			br
+			| Presse.
+
+		+number(30, "Tausend <br> Klicks pro Post", "Auf Homepage &amp; <br> Facebook", "thirty")
+
+		.wide.double.justify.row
+			.column
+				p
+					| Die Students Charity Fight Night, die 2015 erstmals nach Deutschland (Regensburg) geholt wurde, wurde zu 
+					b DEM studentischen Event des Jahres. 
+					| Über 700 studierende kamen im Mylo Grand Club in Regensburg zusammen, um ihre Kommilitonen oder Kommilitoninnen aus verschie&shy;denen Fakultäten anzufeuern, welche sich mutig in den Ring wagten. auch der Fernsehsender TVA, die Mittel&shy;bayerische Zeitung und der Radiosender GongFM waren von der Idee begeistert und berichteten über den Abend. 
+					b Den Zuschauern wurden fesselnde Fights und eine
+
+			.column
+				p
+					b unvergessliche Aftershowparty geboten. 
+					| Vor allem aber dienten die Boxkämpfe einem sozialen Zweck, gingen schließlich die Eintritts&shy;gelder sowie der Erlös aus der Crowdfunding-Kampagne an 
+					b 12 unterschiedliche soziale Pro&shy;jekte. 
+					| Hierbei wurden sowohl Projekte direkt aus Regensburg, zum Beispiel an den Verein Campus Asyl, den Unikindergarten oder "Brücken für Regensburg", als auch an Projekte aus der ganzen Welt, wie zum beispiel das Taha School Project mit Spenden bedacht. 
+
+		+quote(config.statements[0])
+
+		+number(12, "Studenten <br> Projekte", "", "twelve")
+		+number(700, "über <br> Zuschauer", "", "seven-hundred")
+		
+		.articles
+			a(href="http://www.mittelbayerische.de/region/regensburg/stadtteile/galgenberg/ring-frei-fuer-einen-guten-zweck-21356-art1305610.html", target="_blank")
+				img(src="assets/images/press/mz.jpg")
+
+			a(href="http://www.wochenblatt.de/nachrichten/regensburg/regionales/Tolle-Studenten-Aktion-Boxen-fuer-einen-guten-Zweck-;art1172,335947", target="_blank")
+				img(src="assets/images/press/wochenblatt.jpg")
+
+			a(href="http://www.kult.de/stadtbekannt/gutes-tun-und-boxen/150/12/1307372/", target="_blank")
+				img(src="assets/images/press/kult.jpg")
+
+			a(href="http://www.ssv-jahn.de/bruecken-fuer-regensburg/news/4483", target="_blank")
+				img(src="assets/images/press/ssv-jahn-regensburg.jpg")

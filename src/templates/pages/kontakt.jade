@@ -21,3 +21,18 @@ block content
 					b Mail: 
 				td
 					a(href="mailto:info@scfn-regensburg.de") info@scfn-regensburg.de
+
+	br
+	br
+
+	h1.uppercase
+		| Das Team
+
+	ul.team
+		each member in config.team
+			li.member
+				img(src="#{member.image}")
+				.name.uppercase !{member.name.replace(" ", "<br>")}
+				small.position #{member.position}
+
+	ul.team

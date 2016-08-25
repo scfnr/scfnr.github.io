@@ -1,0 +1,24 @@
+extend ../site
+include ../mixins/quote
+
+block head
+	link(href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css", rel="stylesheet")
+
+block content
+	h1.uppercase Die SCFN 2015
+
+	.events
+		.images
+			each group in config.events.scfn2015
+				.group(class="#{group.type ? group.type : ''}")
+					each element in group.elements
+						if element == "break"
+							br
+						else
+							.image
+								a(href="#{element.image}", data-lightbox="images", data-title="#{element.text ? element.text : ''}")
+									img(src="#{element.image}")
+
+	+quote(config.statements[3])
+
+	script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox-plus-jquery.min.js")

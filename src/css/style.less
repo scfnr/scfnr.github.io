@@ -19,6 +19,14 @@
 // buttons
 @button-transition-duration: @transition-duration;
 
+// blockquote
+@blockquote-padding: 50px;
+
+// number
+@number-value-size: 110px;
+@number-description-size: 25px;
+@number-details-size: 9px;
+
 // navbar
 @navbar-logo-width: 304px;
 @navbar-open-duration: @transition-duration;
@@ -39,21 +47,33 @@
 
 // grid
 @column-margin: 10px;
+@row-wide-factor: 3;
+@column-lower-offset: -175px;
 
 // footer
 @footer-links-size: 100px;
 
 @import "typography.less";
+
 @import "components/navbar.less";
 @import "components/jumbotron.less";
 @import "components/progressbar.less";
 @import "components/grid.less";
 @import "components/button.less";
+@import "components/blockquote.less";
+@import "components/number.less";
 @import "components/colored-background.less";
 @import "components/landing-container.less";
 @import "components/partner-container.less";
 @import "components/footer.less";
 @import "components/site-container.less";
+
+@import "pages/about.less";
+@import "pages/team.less";
+@import "pages/letter-of-achievements.less";
+@import "pages/press.less";
+@import "pages/projects.less";
+@import "pages/events.less";
 
 * {
 	box-sizing: border-box;

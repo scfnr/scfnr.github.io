@@ -1,0 +1,16 @@
+extend ../site
+include ../mixins/quote
+
+block content
+	h1.uppercase Unterstützte Projekte
+
+	.projects
+		.images
+			ul.uppercase
+				each project in config.projects
+					li !{project.name}
+
+			each project in config.projects
+				img(src="#{project.image}")
+
+	+quote(config.statements[1])

@@ -19,9 +19,22 @@
 	}
 
 	&.double {
+		&.wide {
+			@column-margin-wide: @row-wide-factor * @column-margin;
+
+			.column {
+				width: ~"calc(50% - @{column-margin-wide})";
+				margin: @column-margin-wide / 2;
+			}
+		}
+
 		.column {
 			width: ~"calc(50% - @{column-margin})";
 			margin: @column-margin / 2;
+
+			&.lower {
+				margin-top: @column-lower-offset;
+			}
 
 			&:first-child {
 				margin-left: 0px;
@@ -35,14 +48,19 @@
 			display: block;
 		}
 
-		&.double .column {
-			width: 100%;
+		&.double {
+			&,
+			&.wide {
+				.column {
+					width: 100%;
 
-			& + .column {
-				width: 100%;
+					& + .column {
+						width: 100%;
 
-				margin-left: 0px;
-				margin-top: 20px;
+						margin-left: 0px;
+						margin-top: 20px;
+					}
+				}
 			}
 		}
 	}

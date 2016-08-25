@@ -19,6 +19,8 @@ html(lang="de")
 		link(rel="shortcut icon", href="assets/images/favicon.ico")
 		link(href="https://fonts.googleapis.com/css?family=Montserrat", rel="stylesheet", type="text/css")
 
+		block head
+
 	body
 		.navbar
 			input(type="checkbox", id="navbar-checkbox")
@@ -52,8 +54,8 @@ html(lang="de")
 				span SCFN - Student Charity Fight Night || 
 				
 				each item, i in config.navbar
-					if i > 2
+					if i > 7
 						a(href="#{item.url}") #{item.name}
 
-						if i < 5
+						if i < 10
 							span  | 

@@ -1,0 +1,6 @@
+mixin quote(statement)
+	blockquote.justify
+		p !{statement.text}
+		.person
+			span.name.uppercase #{statement.person}
+			small.uppercase !{statement.company}
